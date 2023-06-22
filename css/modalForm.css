@@ -1,0 +1,118 @@
+/* Стили для подложки */
+
+.overlay {
+   
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+  
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  
+  
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+  
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+  
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+  padding: 40px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+
+.modal {
+  max-width: 1109px;
+  max-height: 440px;
+}
+.project-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-more__picture {
+  flex-basis: 50%;
+  min-height: 140px;
+  min-width: 274px;
+    max-width: 574px;
+    max-height: 440px;
+}
+.project-more__img {
+    width: 100%;
+    height: 100%;
+}
+.project-info__line {
+    width: 50px;
+    border: 0.5px solid #4985FF;
+    margin: 21px 0;
+}
+.project-info__epigraph {
+  font-weight: 600;
+  margin-bottom: 4px;
+font-size: 0.875rem;
+line-height: 17px;
+color: #323232;
+    max-width: 295px;
+}
+.project-info__desc {
+    max-width: 426px;
+    font-weight: 400;
+font-size: 0.82rem;
+line-height: 20px;
+color: #323232;
+}
+.project-info__title {
+  padding: 0;
+  font-weight: 700;
+font-size: 1.25rem;
+line-height: 24px;
+    max-width: 375px;
+    padding: 0;
+}
